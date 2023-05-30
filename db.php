@@ -33,6 +33,7 @@ class Room
     {
         return $this->image;
     }
+
 }
 
 // Pobierz dane o pokojach z bazy danych i wyświetl je na frontendzie

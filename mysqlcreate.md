@@ -18,5 +18,13 @@ REFERENCES rooms(id)
 ON DELETE CASCADE
 );
 
+-- Tworzenie tabeli "room_availability" przechowującej dostępność pokojów w konkretnych terminach
+CREATE TABLE room_availability (
+id INT PRIMARY KEY AUTO_INCREMENT,
+room_id INT NOT NULL,
+start_date DATE NOT NULL,
+end_date DATE NOT NULL,
+FOREIGN KEY (room_id) REFERENCES rooms(id)
+);
 -- nastepnie dodać dane
 INSERT INTO `rooms` (`id`, `image` , `price`, `name`) VALUES ('1', 'zdjecie.png' , '100' , 'Domek w gorach');
