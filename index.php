@@ -30,7 +30,10 @@
         <h2>Wybierz datę rezerwacji</h2>
         <form action="reservation.php" method="POST">
             <input type="hidden" id="room-id" name="room_id" value="">
-            <input type="date" id="reservation-date" name="reservation_date" required>
+            <label for="start-date">Data rozpoczęcia rezerwacji:</label>
+            <input type="date" id="start-date" name="start_date" required>
+            <label for="end-date">Data zakończenia rezerwacji:</label>
+            <input type="date" id="end-date" name="end_date" required>
             <button type="submit">Potwierdź rezerwację</button>
         </form>
     </div>

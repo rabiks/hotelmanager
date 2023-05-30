@@ -10,7 +10,8 @@ name VARCHAR(40) NOT NULL
 CREATE TABLE reservations (
 id INT PRIMARY KEY AUTO_INCREMENT,
 room_id INT NOT NULL,
-reservation_date DATE NOT NULL,
+start_date DATE NOT NULL,
+end_date DATE NOT NULL,
 CONSTRAINT fk_room
 FOREIGN KEY (room_id)
 REFERENCES rooms(id)
