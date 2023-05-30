@@ -14,11 +14,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Aktualizuj dostępność pokoju w tabeli room_availability
             updateRoomAvailability($room_id, $start_date, $end_date);
             echo "Pokój został zarezerwowany.";
+            echo '<form method="get" action="index.php">
+                    <button type="submit">Przejdź do strony głównej</button>
+                  </form>';
         } else {
             echo "Wystąpił błąd podczas rezerwacji: " . $conn->error;
         }
     } else {
         echo "Ten pokój jest już zarezerwowany w wybranym terminie.";
+        echo '<form method="get" action="index.php">
+                    <button type="submit">Przejdź do strony głównej</button>
+                  </form>';
     }
 }
 
