@@ -12,6 +12,7 @@ id INT PRIMARY KEY AUTO_INCREMENT,
 room_id INT NOT NULL,
 start_date DATE NOT NULL,
 end_date DATE NOT NULL,
+price DECIMAL(10, 2) NOT NULL,
 CONSTRAINT fk_room
 FOREIGN KEY (room_id)
 REFERENCES rooms(id)
